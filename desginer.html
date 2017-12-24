@@ -1,0 +1,828 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Form Builder</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="https://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css" />
+    <link rel="stylesheet" type="text/css" href="./designer.css" />
+
+</head>
+<body>
+
+<div>
+    <div class="row">
+        <div class="col-lg-2 col-md-2 designer-sidebar text-center">
+            <div style="width:100%;">
+                <div class="panel" style="min-height: 600px;margin-bottom: 0px">
+                    <div class="col-lg-12 col-md-12">
+                        <h3>Question Types</h3>
+
+                        <div id="frmb-0-control-box" class="frmb-control ui-sortable">
+
+                            <div class="newicon-group selectorField draggableDiv" style="float: left;margin: 3px" label="Questions Group"
+                                 title="Questions Group">
+                                <div style="display: none" class="div-content">
+                                </div>
+                            </div>
+
+                            <div class="newicon-checkbox selectorField draggableField" style="float: left;margin: 3px" label="Yes/No Question"
+                                 title="Yes/No Question">
+
+                                <div style="display: none" class="div-content box">
+                                    <div class="box-header" data-widget="collapse">
+                                        <div class="box-title question-title">
+                                            <span class="control-required" style="display: none;color: red;vertical-align: top;"> *</span>
+                                            <label class="control-label" style="vertical-align:top">Yes/No Question</label>
+                                            <span class="control-help" title="" style="display: none;vertical-align: top">
+                                    <i class="glyphicon glyphicon-question-sign"></i>
+                                </span>
+                                            <span class="control-hascondition" title="" style="display: none;vertical-align: top;">
+                                    <i class="glyphicon glyphicon-random"></i>
+                                </span>
+
+                                        </div>
+                                        <div class='question-tools box-tools pull-right' style="display: none">
+                                            <button title='Collapse' data-toggle='tooltip' data-widget='collapse'
+                                                    class='btn btn-box-tool' type='button'>
+                                                <i class='fa fa-minus'></i>
+                                            </button>
+                                            <button title='Drop' data-toggle='tooltip' data-widget='drop' class='btn btn-box-tool'
+                                                    type='button' data-original-title='Remove'>
+                                                <i class='fa fa-times'></i>
+                                            </button>
+                                        </div>
+                                    </div>
+
+
+                                    <div class="ctrl-yesno box-body">
+
+                                        <div class="form-group row" style="margin: 0px">
+                                            <div class="col-lg-1 col-md-1">
+                                                <input type="radio" name="YesNoField" value="Y"/>
+                                            </div>
+
+                                            <label class="col-lg-3 col-md-3 eval" data-trans="yes">Yes</label>
+                                        </div>
+
+
+                                        <div class="form-group row" style="margin: 0px">
+                                            <div class="col-lg-1 col-md-1">
+                                                <input type="radio" name="YesNoField" value="N"/>
+                                            </div>
+
+                                            <label class="col-lg-3 col-md-3 eval" data-trans="no">No</label>
+                                        </div>
+
+                                    </div>
+                                    <input class="control-conditions" type="hidden" name="conditions" value=""/>
+                                </div>
+                            </div>
+
+                            <div class="newicon-gender selectorField draggableField" style="float: left;margin: 3px" label="Gender Question"
+                                 title="Gender Question">
+                                <div style="display: none" class="div-content box">
+                                    <div class="box-header" data-widget="collapse">
+                                        <div class="box-title question-title">
+                                            <span class="control-required" style="display: none;color: red;vertical-align: top;"> *</span>
+                                            <label class="control-label" style="vertical-align:top">Gender Question</label>
+                                            <span class="control-help" title="" style="display: none;vertical-align: top">
+                                        <i class="glyphicon glyphicon-question-sign"></i>
+                                    </span>
+                                            <span class="control-hascondition" title=""
+                                                  style="display: none;vertical-align: top;">
+                                        <i class="glyphicon glyphicon-random"></i>
+                                    </span>
+
+                                        </div>
+                                        <div class='question-tools box-tools pull-right' style="display: none">
+                                            <button title='Collapse' data-toggle='tooltip' data-widget='collapse'
+                                                    class='btn btn-box-tool' type='button'>
+                                                <i class='fa fa-minus'></i>
+                                            </button>
+                                            <button title='Drop' data-toggle='tooltip' data-widget='drop' class='btn btn-box-tool'
+                                                    type='button' data-original-title='Remove'>
+                                                <i class='fa fa-times'></i>
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <div class="ctrl-gender box-body">
+
+                                        <div class="form-group row" style="margin: 0px">
+                                            <div class="col-lg-1 col-md-1">
+                                                <input type="radio" name="Gender" value="M"/>
+                                            </div>
+
+                                            <label class="col-lg-3 col-md-3 eval" data-trans="male">Male</label>
+                                        </div>
+
+
+                                        <div class="form-group row" style="margin: 0px">
+                                            <div class="col-lg-1 col-md-1">
+                                                <input type="radio" name="Gender" value="F"/>
+                                            </div>
+
+                                            <label class="col-lg-3 col-md-3 eval"
+                                                   data-trans="female">Female</label>
+                                        </div>
+
+                                        <div class="form-group row" style="margin: 0px">
+                                            <div class="col-lg-1 col-md-1">
+                                                <input type="radio" name="Gender" value="N"/>
+                                            </div>
+
+                                            <label class="col-lg-3 col-md-3 eval"
+                                                   data-trans="not_specified">Not Specified</label>
+                                        </div>
+
+                                    </div>
+                                    <input class="control-conditions" type="hidden" name="conditions" value=""/>
+                                </div>
+                            </div>
+
+                            <div class="newicon-checkbox-group selectorField draggableField" style="float: left;margin: 3px"
+                                 label="Checkbox Group" title="Multiple Choice">
+                                <div style="display: none" class="div-content box">
+                                    <div class="box-header" data-widget="collapse">
+                                        <div class="box-title question-title">
+                                            <span class="control-required" style="display: none;color: red;vertical-align: top;"> *</span>
+                                            <label class="control-label" style="vertical-align:top;">Multiple Choice</label>
+                                            <span class="control-help" title="" style="display: none;vertical-align: top;">
+                                    <i class="glyphicon glyphicon-question-sign"></i>
+                                </span>
+                                            <span class="control-hascondition" title="" style="display: none;vertical-align: top;">
+                                    <i class="glyphicon glyphicon-random"></i>
+                                </span>
+                                        </div>
+                                        <div class='question-tools box-tools pull-right' style="display: none">
+                                            <button title='Collapse' data-toggle='tooltip' data-widget='collapse'
+                                                    class='btn btn-box-tool' type='button'>
+                                                <i class='fa fa-minus'></i>
+                                            </button>
+                                            <button title='Drop' data-toggle='tooltip' data-widget='drop' class='btn btn-box-tool'
+                                                    type='button' data-original-title='Remove'>
+                                                <i class='fa fa-times'></i>
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <div class="ctrl-checkboxgroup box-body">
+
+                                        <div class="form-group row" style="margin: 0px">
+                                            <div class="col-lg-1 col-md-1">
+                                                <input type="checkbox" name="SQ101"/>
+                                            </div>
+
+                                            <label class="col-lg-3 col-md-3">Option 1</label>
+                                        </div>
+                                        <div class="form-group row" style="margin: 0px">
+                                            <div class="col-lg-1 col-md-1">
+                                                <input type="checkbox" name="SQ102"/>
+                                            </div>
+
+                                            <label class="col-lg-3 col-md-3">Option 2</label>
+                                        </div>
+                                        <div class="form-group row" style="margin: 0px">
+                                            <div class="col-lg-1 col-md-1">
+                                                <input type="checkbox" name="SQ103"/>
+                                            </div>
+
+                                            <label class="col-lg-3 col-md-3">Option 3</label>
+                                        </div>
+
+                                    </div>
+                                    <input class="control-conditions" type="hidden" name="conditions" value=""/>
+                                </div>
+                            </div>
+
+                            <div class="newicon-calendar selectorField draggableField" style="float: left;margin: 3px; display: list-item;"
+                                 label="Date Field" title="Date Field">
+                                <div style="display: none" class="div-content box">
+                                    <div class="box-header" data-widget="collapse">
+                                        <div class="box-title question-title">
+                                            <span class="control-required" style="display: none;color: red;vertical-align: top;"> *</span>
+                                            <label class="control-label">Date</label>
+                                            <span class="control-help" title="" style="display: none;vertical-align: top;">
+                                    <i class="glyphicon glyphicon-question-sign"></i>
+                                </span>
+                                            <span class="control-hascondition" title="" style="display: none;vertical-align: top;">
+                                    <i class="glyphicon glyphicon-random"></i>
+                                </span>
+                                        </div>
+                                        <div class='question-tools box-tools pull-right' style="display: none">
+                                            <button title='Collapse' data-toggle='tooltip' data-widget='collapse'
+                                                    class='btn btn-box-tool' type='button'>
+                                                <i class='fa fa-minus'></i>
+                                            </button>
+                                            <button title='Drop' data-toggle='tooltip' data-widget='drop' class='btn btn-box-tool'
+                                                    type='button' data-original-title='Remove'>
+                                                <i class='fa fa-times'></i>
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <div class="box-body">
+                                        <input type="date" name="dateField" class="ctrl-date form-control" placeholder=""/>
+                                        <input class="control-conditions" type="hidden" name="conditions" value=""/>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="newicon-number selectorField draggableField" style="float: left;margin: 3px" label="Number"
+                                 title="Numerical input">
+                                <div style="display: none" class="div-content box">
+                                    <div class="box-header" data-widget="collapse">
+                                        <div class="box-title question-title">
+                                            <span class="control-required" style="display: none;color: red;vertical-align: top;"> *</span>
+                                            <label class="control-label">Numerical input</label>
+                                            <span class="control-help" title="" style="display: none;vertical-align: top;">
+                                    <i class="glyphicon glyphicon-question-sign"></i>
+                                </span>
+                                            <span class="control-hascondition" title="" style="display: none;vertical-align: top;">
+                                    <i class="glyphicon glyphicon-random"></i>
+                                </span>
+                                        </div>
+                                        <div class='question-tools box-tools pull-right' style="display: none">
+                                            <button title='Collapse' data-toggle='tooltip' data-widget='collapse'
+                                                    class='btn btn-box-tool' type='button'>
+                                                <i class='fa fa-minus'></i>
+                                            </button>
+                                            <button title='Drop' data-toggle='tooltip' data-widget='drop' class='btn btn-box-tool'
+                                                    type='button' data-original-title='Remove'>
+                                                <i class='fa fa-times'></i>
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <div class="box-body">
+                                        <input type="number" name="numberField" class="ctrl-number form-control" data-integer_only="no"/>
+                                        <input class="control-conditions" type="hidden" name="conditions" value=""/>
+
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="newicon-radio-group selectorField draggableField" style="float: left;margin: 3px" label="Radio Group"
+                                 title="List">
+                                <div style="display: none" class="div-content box">
+                                    <div class="box-header" data-widget="collapse">
+                                        <div class="box-title question-title">
+                                            <span class="control-required" style="display: none;color: red;vertical-align: top;"> *</span>
+                                            <label class="control-label" style="vertical-align:top">List</label>
+                                            <span class="control-help" title="" style="display: none;vertical-align: top;">
+                                    <i class="glyphicon glyphicon-question-sign"></i>
+                                </span>
+                                            <span class="control-hascondition" title="" style="display: none;vertical-align: top;">
+                                    <i class="glyphicon glyphicon-random"></i>
+                                </span>
+                                        </div>
+                                        <div class='question-tools box-tools pull-right' style="display: none">
+                                            <button title='Collapse' data-toggle='tooltip' data-widget='collapse'
+                                                    class='btn btn-box-tool' type='button'>
+                                                <i class='fa fa-minus'></i>
+                                            </button>
+                                            <button title='Drop' data-toggle='tooltip' data-widget='drop' class='btn btn-box-tool'
+                                                    type='button' data-original-title='Remove'>
+                                                <i class='fa fa-times'></i>
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <div class="ctrl-radiogroup box-body">
+
+                                        <div class="form-group row" style="margin: 0px">
+                                            <div class="col-lg-1 col-md-1">
+                                                <input type="radio" name="radioField" value="A1"/>
+                                            </div>
+
+                                            <label class="col-lg-3 col-md-3">Option 1</label>
+                                        </div>
+
+                                        <div class="form-group row" style="margin: 0px">
+                                            <div class="col-lg-1 col-md-1">
+                                                <input type="radio" name="radioField" value="A2"/>
+                                            </div>
+
+                                            <label class="col-lg-3 col-md-3">Option 2</label>
+                                        </div>
+
+                                        <div class="form-group row" style="margin: 0px">
+                                            <div class="col-lg-1 col-md-1">
+                                                <input type="radio" name="radioField" value="A3"/>
+                                            </div>
+
+                                            <label class="col-lg-3 col-md-3">Option 3</label>
+                                        </div>
+
+                                    </div>
+                                    <input class="control-conditions" type="hidden" name="conditions" value=""/>
+                                </div>
+                            </div>
+
+                            <div class="newicon-text-input selectorField draggableField" style="float: left;margin: 3px" label="Text Field"
+                                 title="Short Free Text">
+                                <div style="display: none" class="div-content box">
+                                    <div class="box-header" data-widget="collapse">
+                                        <div class="box-title question-title">
+                                            <span class="control-required" style="display: none;color: red;vertical-align: top"> *</span>
+                                            <label class="control-label">Short Free Text</label>
+                                            <span class="control-help" title="" style="display: none;vertical-align: top;">
+                                    <i class="glyphicon glyphicon-question-sign"></i>
+                                </span>
+                                            <span class="control-hascondition" title="" style="display: none;vertical-align: top;">
+                                    <i class="glyphicon glyphicon-random"></i>
+                                </span>
+                                        </div>
+                                        <div class='question-tools box-tools pull-right' style="display: none">
+                                            <button title='Collapse' data-toggle='tooltip' data-widget='collapse'
+                                                    class='btn btn-box-tool' type='button'>
+                                                <i class='fa fa-minus'></i>
+                                            </button>
+                                            <button title='Drop' data-toggle='tooltip' data-widget='drop' class='btn btn-box-tool'
+                                                    type='button' data-original-title='Remove'>
+                                                <i class='fa fa-times'></i>
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <div class="box-body">
+                                        <input name="shortTextField" type="text" class="ctrl-textbox form-control" maxlength=""/>
+                                        <input class="control-conditions" type="hidden" name="conditions" value=""/>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="newicon-email selectorField draggableField" style="float: left;margin: 3px" label="Email Field"
+                                 title="Email">
+                                <div style="display: none" class="div-content box">
+                                    <div class="box-header" data-widget="collapse">
+                                        <div class="box-title question-title">
+                                            <span class="control-required" style="display: none;color: red;vertical-align: top"> *</span>
+                                            <label class="control-label">Email</label>
+                                            <span class="control-help" title="" style="display: none;vertical-align: top;">
+                                    <i class="glyphicon glyphicon-question-sign"></i>
+                                </span>
+                                            <span class="control-hascondition" title="" style="display: none;vertical-align: top;">
+                                    <i class="glyphicon glyphicon-random"></i>
+                                </span>
+                                        </div>
+                                        <div class='question-tools box-tools pull-right' style="display: none">
+                                            <button title='Collapse' data-toggle='tooltip' data-widget='collapse'
+                                                    class='btn btn-box-tool' type='button'>
+                                                <i class='fa fa-minus'></i>
+                                            </button>
+                                            <button title='Drop' data-toggle='tooltip' data-widget='drop' class='btn btn-box-tool'
+                                                    type='button' data-original-title='Remove'>
+                                                <i class='fa fa-times'></i>
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <div class="box-body">
+                                        <input name="emailField" type="text" class="ctrl-email form-control" maxlength=""/>
+                                        <input class="control-conditions" type="hidden" name="conditions" value=""/>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="newicon-text-area selectorField draggableField" style="float: left;margin: 3px" label="Text Area"
+                                 title="Long Free Text">
+                                <div style="display: none" class="div-content box">
+                                    <div class="box-header" data-widget="collapse">
+                                        <div class="box-title question-title">
+                                            <span class="control-required" style="display: none;color: red;vertical-align: top"> *</span>
+                                            <label class="control-label">Long Free Text</label>
+                                            <span class="control-help" title="" style="display: none;vertical-align: top;">
+                                    <i class="glyphicon glyphicon-question-sign"></i>
+                                </span>
+                                            <span class="control-hascondition" title="" style="display: none;vertical-align: top;">
+                                    <i class="glyphicon glyphicon-random"></i>
+                                </span>
+                                        </div>
+                                        <div class='question-tools box-tools pull-right' style="display: none">
+                                            <button title='Collapse' data-toggle='tooltip' data-widget='collapse'
+                                                    class='btn btn-box-tool' type='button'>
+                                                <i class='fa fa-minus'></i>
+                                            </button>
+                                            <button title='Drop' data-toggle='tooltip' data-widget='drop' class='btn btn-box-tool'
+                                                    type='button' data-original-title='Remove'>
+                                                <i class='fa fa-times'></i>
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <div class="box-body">
+                                        <textarea name="longTextField" class="ctrl-textarea form-control" maxlength=""></textarea>
+                                        <input class="control-conditions" type="hidden" name="conditions" value=""/>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="newicon-table selectorField draggableField" style="float: left;margin: 3px" label="Array Question"
+                                 title="Array Question">
+                                <div style="display: none" class="div-content box">
+                                    <div class="box-header" data-widget="collapse">
+                                        <div class="box-title question-title">
+                                            <span class="control-required" style="display: none;color: red;vertical-align: top"> *</span>
+                                            <label class="control-label">Array Question</label>
+                                            <span class="control-help" title="" style="display: none;vertical-align: top;">
+                                    <i class="glyphicon glyphicon-question-sign"></i>
+                                </span>
+                                            <span class="control-hascondition" title="" style="display: none;vertical-align: top;">
+                                    <i class="glyphicon glyphicon-random"></i>
+                                </span>
+                                        </div>
+                                        <div class='question-tools box-tools pull-right' style="display: none">
+                                            <button title='Collapse' data-toggle='tooltip' data-widget='collapse'
+                                                    class='btn btn-box-tool' type='button'>
+                                                <i class='fa fa-minus'></i>
+                                            </button>
+                                            <button title='Drop' data-toggle='tooltip' data-widget='drop' class='btn btn-box-tool'
+                                                    type='button' data-original-title='Remove'>
+                                                <i class='fa fa-times'></i>
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <div class="box-body">
+                                        <table class="ctrl-array table table-striped">
+                                            <tr>
+                                                <td width="25%"></td>
+                                                <td width="25%">Option 1</td>
+                                                <td width="25%">Option 2</td>
+                                                <td width="25%">Option 3</td>
+                                            </tr>
+                                            <tr>
+                                                <td width="25%">Question 1</td>
+                                                <td colspan="3" width="75%">
+                                                    <table width="100%">
+                                                        <tr>
+                                                            <td><input name="SQ101" value="A1" type="radio"/></td>
+                                                            <td><input name="SQ101" value="A2" type="radio"/></td>
+                                                            <td><input name="SQ101" value="A3" type="radio"/></td>
+                                                        </tr>
+                                                    </table>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td width="25%">Question 2</td>
+                                                <td colspan="3" width="75%">
+                                                    <table width="100%">
+                                                        <tr>
+                                                            <td><input name="SQ102" value="A1" type="radio"/></td>
+                                                            <td><input name="SQ102" value="A2" type="radio"/></td>
+                                                            <td><input name="SQ102" value="A3" type="radio"/></td>
+                                                        </tr>
+                                                    </table>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td width="25%">Question 3</td>
+                                                <td colspan="3" width="75%">
+                                                    <table width="100%">
+                                                        <tr>
+                                                            <td><input name="SQ103" value="A1" type="radio"/></td>
+                                                            <td><input name="SQ103" value="A2" type="radio"/></td>
+                                                            <td><input name="SQ103" value="A3" type="radio"/></td>
+                                                        </tr>
+                                                    </table>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                        <input class="control-conditions" type="hidden" name="conditions" value=""/>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="newicon-paragraph selectorField draggableField" style="float: left;margin: 3px" label="Paragraph"
+                                 title="Paragraph">
+                                <div style="display: none" class="div-content box">
+                                    <div class="box-header" data-widget="collapse">
+                                        <div class="box-title question-title">
+                                            <span class="control-required" style="display: none;color: red;vertical-align: top"> *</span>
+                                            <label class="control-label">Paragraph</label>
+                                            <span class="control-help" title="" style="display: none;vertical-align: top;">
+                                    <i class="glyphicon glyphicon-question-sign"></i>
+                                </span>
+                                            <span class="control-hascondition" title="" style="display: none;vertical-align: top;">
+                                    <i class="glyphicon glyphicon-random"></i>
+                                </span>
+                                        </div>
+                                        <div class='question-tools box-tools pull-right' style="display: none">
+                                            <button title='Collapse' data-toggle='tooltip' data-widget='collapse'
+                                                    class='btn btn-box-tool' type='button'>
+                                                <i class='fa fa-minus'></i>
+                                            </button>
+                                            <button title='Drop' data-toggle='tooltip' data-widget='drop' class='btn btn-box-tool'
+                                                    type='button' data-original-title='Remove'>
+                                                <i class='fa fa-times'></i>
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <div class="box-body">
+                                        <label class="control-label">Paragraph</label>
+                                        <a class="ctrl-paragraph" data-hasqtip="true" aria-describedby="qtip-46">
+                                            <!--                    <i class="fa fa-paragraph" style="color:#333;font-size: 6em;"></i>-->
+                                        </a>
+                                        <input class="control-conditions" type="hidden" name="conditions" value=""/>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                        </div>
+
+
+                    </div>
+                    <div class="col-lg-12 col-md-12">
+                        <input type="button" name="export" class="btn btn-save-designer btn-block" value="Export As Json"
+                               data-activate="false" data-preview="false" onclick="export_as_json(this)"/>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-lg-10 col-md-10">
+
+            <div class="designer-pannel">
+                <div>
+                    <div class="frmb1-control" id="selected-content" style="min-height: 300px">
+                            <div class='box box-designer question-group' id='question-group-wrap100'>
+                                <div class='box-header with-border'>
+                                    <h3 class='box-title'>
+                                        <a href='#' class='group_name_container' onclick="customize_group_ctrl('group', 'selected-action-column100')">Group Name</a>
+                                        <input type='hidden' name='group_description' value='' />
+                                    </h3>
+                                    <div class='box-tools pull-right'>
+                                        <button title='Collapse' data-toggle='tooltip' data-widget='collapse' class='btn btn-box-tool' type='button'>
+                                            <i class='fa fa-minus'></i>
+                                        </button>
+                                        <button title='Drop' data-toggle='tooltip' data-widget='drop' class='btn btn-box-tool' type='button' data-original-title='Remove'>
+                                            <i class='fa fa-times'></i>
+                                        </button>
+                                    </div>
+                                </div>
+                                <div class='box-body action-bar droppedFields ctrl-group' id='selected-action-column100' style='min-height: 100px'>
+                                </div>
+                            </div>
+                        </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+<div id="resultsModal" class="modal" tabindex="-1" role="dialog" aria-labelledby="resultsModal" aria-hidden="true">
+
+    <div class='modal-dialog'>
+        <div class='modal-content'>
+            <div class="modal-header">
+                <button type='button' class='close' data-dismiss='modal' aria-hidden='true'>×</button><h4 class='modal-title'>Results</h4>
+            </div>
+            <div class="modal-body">
+                <textarea id="resultsArea" class="ctrl-textarea form-control" rows="20"></textarea>
+            </div>
+            <div class="modal-footer">
+                <button class="btn" data-dismiss="modal" aria-hidden="true">Close</button>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+</div>
+
+
+
+<!--Starting templates declaration-->
+
+<script id="control-customize-template" type="text/x-handlebars-template">
+    <div class='modal-dialog'>
+        <div class='modal-content'>
+            <div class="modal-header">
+                <button type='button' class='close' data-dismiss='modal' aria-hidden='true'>×</button><h4 class='modal-title'>{{header}}</h4>
+            </div>
+            <div class="modal-body">
+                <form id="theForm" class="form-horizontal" onsubmit="return false">
+                    <input type="hidden" value="{{type}}" name="type"/>
+                    <input type="hidden" value="{{forCtrl}}" name="forCtrl"/>
+
+                    <div class="form-group">
+                        {{#if textArea}}
+                        <label class="col-lg-4 col-md-4 control-label" for="label">Paragraph text</label>
+                        <div class="col-lg-8 col-md-8">
+                            <textarea rows="7" id="label" name="label" class="form-control" value=""></textarea>
+                        </div>
+                        {{else}}
+                        <label class="col-lg-4 col-md-4 control-label" for="label">Question Text</label>
+                        <div class="col-lg-8 col-md-8">
+                            <input type="text" id="label" name="label" class="form-control" value=""/>
+                        </div>
+                        {{/if}}
+                    </div>
+
+                    <div class="form-group">
+                        <label class="col-lg-4 col-md-4 control-label" for="help">Help text</label>
+
+                        <div class="col-lg-8 col-md-8">
+                            <input type="text" id="help" name="help" class="form-control" value=""/>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="col-lg-4 col-md-4 control-label">Required</label>
+
+                        <div class="col-lg-8 col-md-8">
+
+                            <label style="display: inline;vertical-align: middle"><input type="radio" name="required" value="yes" />
+                                Yes
+                            </label>
+                            <label style="display: inline;vertical-align: middle"><input type="radio" name="required" value="no" />
+                                No
+                            </label>
+
+                        </div>
+                    </div>
+
+                    {{{content}}}
+
+                    <div id="conditions-content">
+                        <p>
+                            <label class="control-label">Conditions</label>
+                            <span title="Add Scenario" class="add-scenario"><i class='glyphicon glyphicon-plus'></i> </span>
+                            <br>
+                        </p>
+                        <div class="scenario-template" style="display: none">
+                            <p>
+                                Scenario <span title="Remove Scenario" class="remove-scenario"><i class='glyphicon glyphicon-minus'></i></span>
+                            </p>
+                        </div>
+                        <div class="condition-template" style="display: none">
+                            <select id="condition_question" name="condition_question" style="width:20%">
+                            </select>
+                            <select id="condition_method" name="condition_method" style="width:20%">
+                            </select>
+                            <select id="condition_type" name="condition_type" style="width:20%">
+                            </select>
+                            <select id="condition_value" name="condition_value" style="width:20%">
+                            </select>
+                            <span title="Add Condition" class="add-condition"><i class='glyphicon glyphicon-plus'></i> </span>
+                            <span title="Reomve Condition" class="remove-condition"><i class='glyphicon glyphicon-minus'></i></span>
+                        </div>
+
+                    </div>
+
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-primary" data-dismiss="modal" onclick='save_customize_changes()'>Save changes</button>
+                <button class="btn" data-dismiss="modal" aria-hidden="true">Close</button>
+                <button class="btn btn-danger" data-dismiss="modal" aria-hidden="true" onclick='delete_ctrl(false)'>Delete</button>
+            </div>
+        </div>
+    </div>
+</script>
+
+<script id="group-template" type="text/x-handlebars-template">
+    <div class='modal-dialog'>
+        <div class='modal-content'>
+            <div class="modal-header">
+                <h3>{{header}}</h3>
+            </div>
+            <div class="modal-body">
+                <form id="theForm" class="form-horizontal" onsubmit="return false">
+                    <input type="hidden" value="{{type}}" name="type"/>
+                    <input type="hidden" value="{{forCtrl}}" name="forCtrl"/>
+
+                    <div id="new_group_div" style="display: block">
+
+                        <div class="form-group">
+                            <label class="col-lg-4 col-md-4 control-label" for="group_name">Group Name</label>
+
+                            <div class="col-lg-8 col-md-8">
+                                <input type="text" id="group_name" name="group_name" class="form-control" value=""/>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="col-lg-4 col-md-4 control-label" for="group_description">Group Description</label>
+
+                            <div class="col-lg-8">
+                                <textarea id="group_description" name="group_description" class="form-control" rows="5"></textarea>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-primary" data-dismiss="modal" onclick='save_customize_changes(true)'>Save changes</button>
+                <button class="btn btn-info" data-dismiss="modal" aria-hidden="true">Close</button>
+                <button class="btn btn-danger" data-dismiss="modal" aria-hidden="true"
+                        onclick='delete_ctrl(true)'>Delete</button>
+            </div>
+        </div>
+    </div>
+</script>
+
+<script id="textbox-template" type="text/x-handlebars-template">
+
+    <div class="form-group">
+        <label class="col-lg-4 col-md-4 control-label" for="help">Max Length</label>
+
+        <div class="col-lg-8 col-md-8">
+            <input type="number" id="maxlength" pattern="\d*" onkeypress="return goodchars(event,'0123456789')" name="maxlength" class="form-control" value=""/>
+        </div>
+    </div>
+
+</script>
+
+<script id="email-template" type="text/x-handlebars-template">
+    <div class="form-group">
+    </div>
+</script>
+
+<script id="date-template" type="text/x-handlebars-template">
+</script>
+
+<script id="number-template" type="text/x-handlebars-template">
+
+    <div class="form-group">
+        <label class="col-lg-4 col-md-4 control-label" for="maxlength">Max Length</label>
+
+        <div class="col-lg-8 col-md-8">
+            <input type="number" pattern="\d*" id="maxlength" name="maxlength" onkeypress="return goodchars(event,'0123456789')" class="form-control" value=""/>
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label class="col-lg-4 col-md-4 control-label">Integer only</label>
+
+        <div class="col-lg-8 col-md-">
+
+            <label style="display: inline;vertical-align: middle"><input type="radio" name="integer_only" value="yes" />
+                Yes
+            </label>
+            <label style="display: inline;vertical-align: middle"><input type="radio" name="integer_only" value="no" />
+                No
+            </label>
+
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label class="col-lg-4 col-md-4 control-label" for="min">Min</label>
+
+        <div class="col-lg-8 col-md-8">
+            <input type="number" id="min" name="min" class="form-control" value=""/>
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label class="col-lg-4 col-md-4 control-label" for="max">Max</label>
+
+        <div class="col-lg-8 col-md-8">
+            <input type="number" id="max" name="max" class="form-control" value=""/>
+        </div>
+    </div>
+
+</script>
+
+<script id="combobox-template" type="text/x-handlebars-template">
+
+    <div class="form-group">
+        <label class="col-lg-4 col-md-4 control-label" for="options">Options</label>
+
+        <div class="col-lg-8 col-md-8">
+            <textarea id="options" name="options" class="form-control" rows="5"></textarea>
+        </div>
+    </div>
+
+</script>
+
+<script id="array-template" type="text/x-handlebars-template">
+
+    <div class="form-group">
+        <label class="col-lg-4 col-md-4 control-label" for="qustions">Questions</label>
+
+        <div class="col-lg-8 col-md-8">
+            <textarea id="questions" name="questions" class="form-control" rows="5"></textarea>
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label class="col-lg-4 col-md-4 control-label" for="options">Options</label>
+
+        <div class="col-lg-8 col-md-8">
+            <textarea id="options" name="options" class="form-control" rows="5"></textarea>
+        </div>
+    </div>
+
+</script>
+
+
+
+<!-- Javascript -->
+
+<script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/1.0.0-rc.3/handlebars.min.js"></script>
+<script src="./app.js"></script>
+
+
+</body>
+</html>
