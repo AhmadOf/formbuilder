@@ -824,3 +824,17 @@ h3{
     font-style: oblique;
     font-weight: bold;
 }
+
+@media (max-width: 992px) {
+    .panel{
+        min-height: 300px;
+    }
+}
+@media (min-width: 992px) {
+    .panel{
+        min-height: 600px;
+    }
+}
+.export-section{
+    padding-top:10px;
+}

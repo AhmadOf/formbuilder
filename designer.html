@@ -16,7 +16,11 @@
     <div class="row">
         <div class="col-lg-2 col-md-2 designer-sidebar text-center">
             <div style="width:100%;">
-                <div class="panel" style="min-height: 600px;margin-bottom: 0px">
+                <div class="panel" style="margin-bottom: 0px">
+                    <div class="export-section col-lg-12 col-md-12">
+                        <input type="button" name="export" class="btn btn-save-designer btn-block" value="Export As Json"
+                               data-activate="false" data-preview="false" onclick="export_as_json(this)"/>
+                    </div>
                     <div class="col-lg-12 col-md-12">
                         <h3>Question Types</h3>
 
@@ -528,10 +532,6 @@
 
 
                     </div>
-                    <div class="col-lg-12 col-md-12">
-                        <input type="button" name="export" class="btn btn-save-designer btn-block" value="Export As Json"
-                               data-activate="false" data-preview="false" onclick="export_as_json(this)"/>
-                    </div>
                 </div>
             </div>
         </div>
@@ -822,7 +822,6 @@
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/1.0.0-rc.3/handlebars.min.js"></script>
 <script src="./app.js"></script>
-
 
 </body>
 </html>
